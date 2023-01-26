@@ -35,7 +35,6 @@ namespace Data.Models
         {
 
             var categories = this.SuscribedCategories.Split(",").ToList().Select(category => {
-                Console.WriteLine(category);
                 var codeCategory = Int16.Parse(category);
                 return CategoryFunctions.GetCategoryFromCode(codeCategory);
             }).ToList();
